@@ -1,0 +1,26 @@
+button {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,-apple-system, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  outline: none;
+  padding: 13px 13px;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  width: auto;
+  margin: 5px;
+}
+
+button:active {
+  background-color: #F7F7F7;
+  transform: scale(.96);
+}

@@ -1,1 +1,7 @@
-<p>lista-itens works!</p>
+<button
+  *ngFor="let item of itens"
+  type="button"
+  (click)="selecionarItem(item)"
+>
+  {{ item }}
+</button>

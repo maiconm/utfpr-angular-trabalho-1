@@ -8,7 +8,9 @@ describe('ListaItensComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListaItensComponent ]
+      declarations: [
+        ListaItensComponent,
+      ],
     })
     .compileComponents();
   });
@@ -22,4 +24,12 @@ describe('ListaItensComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('deve emitir o valor correto com o `selecionarItem()`', () => {
+    spyOn(component.itemSelecionado, 'emit');
+    component.itens = ['teste 1', 'teste 2'];
+    component.selecionarItem(component.itens[0]);
+    expect(component.itemSelecionado.emit).toHaveBeenCalledOnceWith('teste 1');
+  });
+
 });
