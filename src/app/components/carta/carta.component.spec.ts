@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Naipes } from 'src/app/enums/naipes';
 import { Valores } from 'src/app/enums/valores';
+import { Carta } from 'src/app/models/carta';
+import { CorCartaPipe } from 'src/app/pipes/cor-carta.pipe';
 
 import { CartaComponent } from './carta.component';
 
@@ -11,7 +13,10 @@ describe('CartaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CartaComponent ]
+      declarations: [
+        CartaComponent,
+        CorCartaPipe,
+      ]
     })
     .compileComponents();
   });
