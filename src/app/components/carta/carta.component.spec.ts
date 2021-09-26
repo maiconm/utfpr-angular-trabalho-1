@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
+import { Naipes } from 'src/app/enums/naipes';
+import { Valores } from 'src/app/enums/valores';
 
 import { CartaComponent } from './carta.component';
 
@@ -25,13 +27,13 @@ describe('CartaComponent', () => {
   });
 
   it('deve encontrar os elementos com valores iguais do objeto `Carta`', () => {
-    component.carta.naipe = 'x';
-    component.carta.valor = 'y';
+    component.carta.naipe = Naipes.copas;
+    component.carta.valor = Valores.as;
     fixture.detectChanges();
     const elementoValor = fixture.debugElement.query(By.css('p')).nativeElement;
     const elementoNaipe = fixture.debugElement.query(By.css('p:nth-child(2)')).nativeElement;
-    expect(elementoNaipe.textContent).toEqual('x');
-    expect(elementoValor.textContent).toEqual('y');
+    expect(elementoNaipe.textContent).toEqual(Naipes.copas);
+    expect(elementoValor.textContent).toEqual(Valores.as);
   });
 
 });

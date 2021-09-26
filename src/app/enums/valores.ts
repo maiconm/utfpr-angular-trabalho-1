@@ -1,0 +1,15 @@
+export enum Valores {
+  as = 'A',
+  dois = '2',
+  tres = '3',
+  quatro = '4',
+  cinco = '5',
+  seis = '6',
+  sete = '7',
+  oito = '8',
+  nove = '9',
+  dez = '10',
+  valete = 'J',
+  dama = 'Q',
+  rei = 'K',
+}

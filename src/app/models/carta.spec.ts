@@ -2,6 +2,6 @@ import { Carta } from './carta';
 
 describe('Carta', () => {
   it('should create an instance', () => {
-    expect(new Carta('A', '♥')).toBeTruthy();
+    expect(new Carta()).toBeTruthy();
   });
 });
