@@ -27,3 +27,11 @@ p {
 p:last-child {
   transform: rotate(180deg);
 }
+
+.vermelho {
+  color: red;
+}
+
+.verde {
+  color: green;
+}

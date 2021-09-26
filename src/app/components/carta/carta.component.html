@@ -1,8 +1,10 @@
-<div>
-    <p>{{ carta?.valor }}</p>
-    <div class="naipe-container">
-        <p>{{ carta?.naipe }}</p>
-        <p>{{ carta?.naipe }}</p>
-    </div>
-    <p>{{ carta?.valor }}</p>
+<div
+  [class]="carta?.naipe | corCarta"
+>
+  <p>{{ carta?.valor }}</p>
+  <div class="naipe-container">
+    <p>{{ carta?.naipe }}</p>
+    <p>{{ carta?.naipe }}</p>
+  </div>
+  <p>{{ carta?.valor }}</p>
 </div>
