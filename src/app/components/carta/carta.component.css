@@ -1,0 +1,29 @@
+div {
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px;
+  border-radius: 5%;
+  flex-direction: column;
+  width: 140px;
+  height: 250px;
+  border: 1px solid black;
+  font-size: 32px;
+  justify-content: space-between;
+  box-shadow: 5px 10px 8px #888888;
+}
+
+.naipe-container {
+  width: 100%;
+  border-radius: 0;
+  height: 154px;
+  box-shadow: none;
+}
+
+p {
+  margin: 0;
+  line-height: 34px;
+}
+
+p:last-child {
+  transform: rotate(180deg);
+}

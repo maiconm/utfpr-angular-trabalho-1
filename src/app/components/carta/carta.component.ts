@@ -1,4 +1,5 @@
-import { Component, } from '@angular/core';
+import { Component, Input, } from '@angular/core';
+import { Carta } from 'src/app/models/carta';
 
 @Component({
   selector: 'app-carta',
@@ -6,5 +7,8 @@ import { Component, } from '@angular/core';
   styleUrls: ['./carta.component.css']
 })
 export class CartaComponent {
+
+  @Input()
+  public carta = new Carta();
 
 }
