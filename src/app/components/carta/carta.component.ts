@@ -8,6 +8,9 @@ import { Carta } from 'src/app/models/carta';
 })
 export class CartaComponent {
 
+  /**
+   * Objeto carta com naipe e valor escolhido.
+   */
   @Input()
   public carta = new Carta();
 
