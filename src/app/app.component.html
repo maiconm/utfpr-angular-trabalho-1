@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<div>
+  <app-lista-itens
+    [itens]="valores"
+    (itemSelecionado)="selecionarValor($event)"
+  ></app-lista-itens>
+  <br>
+  <app-lista-itens
+    [itens]="naipes"
+    (itemSelecionado)="selecionarNaipe($event)"
+  ></app-lista-itens>
+  <app-carta
+    [carta]="carta"
+  ></app-carta>
+</div>
