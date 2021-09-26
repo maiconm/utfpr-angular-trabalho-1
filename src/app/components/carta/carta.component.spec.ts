@@ -31,14 +31,28 @@ describe('CartaComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('ao iniciar, `carta` não pode ter valor nem naipe', () => {
+    expect(component.carta.valor).toBeFalsy();
+    expect(component.carta.naipe).toBeFalsy();
+  });
+
   it('deve encontrar os elementos com valores iguais do objeto `Carta`', () => {
-    component.carta.naipe = Naipes.copas;
-    component.carta.valor = Valores.as;
+    component.carta = new Carta(
+      Valores.as,
+      Naipes.copas,
+    );
     fixture.detectChanges();
-    const elementoValor = fixture.debugElement.query(By.css('p')).nativeElement;
-    const elementoNaipe = fixture.debugElement.query(By.css('p:nth-child(2)')).nativeElement;
+    const elementoValor = fixture.debugElement.query(By.css('div>p')).nativeElement;
+    const elementoNaipe = fixture.debugElement.query(By.css('.naipe-container>p')).nativeElement;
     expect(elementoNaipe.textContent).toEqual(Naipes.copas);
     expect(elementoValor.textContent).toEqual(Valores.as);
+  });
+
+  it('a primeira `div` deve estar com classe `vermelha` ao selecionar um naipe correpondente ao vermelho', () => {
+    component.carta.naipe = Naipes.copas;
+    fixture.detectChanges();
+    const divComClasseVermelho = fixture.debugElement.query(By.css('.vermelho')).nativeElement;
+    expect(divComClasseVermelho).toBeTruthy();
   });
 
 });
